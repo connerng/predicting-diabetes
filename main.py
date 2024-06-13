@@ -36,3 +36,6 @@ lr_results.columns = ['Method', 'Training MSE', 'Training R^2', 'Test MSE', 'Tes
 
 print(lr_results)
 
+plt.scatter(x = y_train, y = y_lr_train_pred)
+plt.plot()
+plt.show()
