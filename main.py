@@ -11,6 +11,13 @@ y = df['Diagnosis']
 x = df.drop('Diagnosis', axis=1)
 x = x.drop('DoctorInCharge', axis=1)
 x = x.drop('PatientID', axis=1)
+x = x.drop('Ethnicity', axis=1)
+x = x.drop('SocioeconomicStatus', axis=1)
+x = x.drop('EducationLevel', axis=1)
+x = x.drop('HealthLiteracy', axis=1)
+x = x.drop('MedicalCheckupsFrequency', axis=1)
+
+print(x)
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=61)
 
@@ -36,6 +43,4 @@ lr_results.columns = ['Method', 'Training MSE', 'Training R^2', 'Test MSE', 'Tes
 
 print(lr_results)
 
-plt.scatter(x = y_train, y = y_lr_train_pred)
-plt.plot()
-plt.show()
+
